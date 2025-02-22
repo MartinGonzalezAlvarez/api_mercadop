@@ -182,4 +182,20 @@ Los datos devueltos incluyen:
 Obtén el código de un proveedor usando su RUT.
 
 - **URL**: `https://api.mercadopublico.cl/servicios/v1/Publico/Empresas/BuscarProveedor`
-- **Ejemplo**:
+- **Ejemplo**:`https://api.mercadopublico.cl/servicios/v1/Publico/Empresas/BuscarProveedor?rutempresaproveedor=70.017.820-k&ticket=F8537A18-6766-4DEF-9E59-426B4FEE2844`
+- - **Resultado**: Lista con `{ "CódigoEmpresa": 6945, "NombreEmpresa": "Dirección de Compras y Contratación Pública" }`, entre otros.
+
+---
+
+## Ejemplos Prácticos
+
+### Ejemplo 1: Licitaciones Adjudicadas (2 de Febrero de 2014)
+
+```bash
+curl "https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json?fecha=02022014&estado=adjudicada&ticket=F8537A18-6766-4DEF-9E59-426B4FEE2844"
+
+Notas Importantes
+Fecha de referencia: Los ejemplos usan 02022014 (2 de febrero de 2014). Ajusta la fecha según tus necesidades (ejemplo: 22022025 para hoy).
+Información Básica vs Detallada: Consultas por fecha dan datos básicos; por código, datos completos.
+Uso del Ticket: Siempre obligatorio en cada solicitud.
+Documentación Oficial: Consulta api.mercadopublico.cl para más detalles o actualizaciones.
